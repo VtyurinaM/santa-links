@@ -1328,7 +1328,7 @@ function renderGift() {
   $("#gMeta").textContent = (g.r ? "Комната «" + g.r + "» · " : "") + "розыгрыш " + fmtDate(g.d);
   $("#gEnv").innerHTML = `<span class="wax">${WAX}</span><span class="to"><small>Лично в руки</small><b></b></span>`;
   $("#gEnv .to b").textContent = g.f;
-  document.title = "Письмо для " + g.f + " · Тайный Санта";
+  document.title = "Письмо для игрока по имени " + g.f + " · Тайный Санта";
 }
 const openGift = () => { const g = R.gift; if (g) openLetter({ to: g.t, wish: g.w, room: g.r, at: g.d }); };
 $("#gEnv").addEventListener("click", openGift);
